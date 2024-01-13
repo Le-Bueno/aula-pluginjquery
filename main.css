@@ -1,5 +1,5 @@
 * {
-    margin: o;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
@@ -10,9 +10,6 @@ html {
 }
 
 .container {
-
-
-
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
@@ -32,15 +29,12 @@ nav {
 }
 
 nav li {
-
     list-style: none;
     display: inline;
     margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-
-
 }
 
 header {
@@ -52,12 +46,9 @@ header {
 
 header>.container,
 footer>.container {
-
-
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
-
 }
 
 nav li a {
@@ -68,7 +59,6 @@ nav li a {
 .menu-hamburguer {
     width: 32px;
     cursor: pointer;
-
 }
 
 .menu-hamburguer span {
@@ -81,21 +71,24 @@ nav li a {
 
 .container-flex {
     display: flex;
+    flex-wrap: wrap;
+    /* Adicionado para garantir que os elementos se ajustem em telas menores */
 }
 
 #sobre-a-loja img {
-    max-width: 400px;
-    margin-right: 24px;
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner pai */
+    margin-right: 0;
+    /* Remove a margem direita em telas menores */
 }
 
 section {
-    padding: 48px 0;
+    padding: 48px 16px;
+    /* Adicionado preenchimento lateral para telas menores */
 }
 
 section h2 {
-
     margin-bottom: 16px;
-
 }
 
 .lista-veiculos {
@@ -104,59 +97,29 @@ section h2 {
 
 .lista-veiculos li {
     list-style: none;
-    max-width: 30%;
+    max-width: 100%;
+    /* Garante que os itens ocupem 100% da largura em telas menores */
     margin-bottom: 24px;
-
-
 }
 
 .lista-veiculos li img {
     max-width: 100%;
 }
 
-.lista-veiculos li h3 {
-    margin: 16px 0;
-}
-
 .item-central {
-    margin: 0 5%;
+    margin: 0;
+    max-width: 100%;
+    /* Garante que os itens centrais ocupem 100% da largura em telas menores */
 }
 
 button {
-    display: block;
     width: 100%;
-    padding: 8px 0;
-    border: none;
-    background-color: #119759;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: italic;
-    cursor: pointer;
-    border-radius: 6px;
-
-
-}
-
-.price {
-    margin: 16px 0;
-    display: block;
-}
-
-.price del {
-    color: #ccc;
-    font-size: 14px;
-
+    max-width: none;
+    /* Remove a largura máxima para ocupar 100% da largura em telas menores */
 }
 
 .form-campo {
     margin-bottom: 16px;
-
-}
-
-.form-campo label {
-    font-weight: bold;
-    display: block;
 }
 
 .form-campo input,
@@ -164,19 +127,23 @@ button {
     width: 100%;
     display: block;
     padding: 8px;
+    box-sizing: border-box;
+    /* Garante que o preenchimento não afete a largura total */
 }
 
-.form-campo textarea {
-    resize: none;
+form textarea {
     height: 120px;
+    resize: none;
 }
 
 form {
-    max-width: 300px;
+    max-width: 100%;
+    /* Garante que o formulário ocupe toda a largura do contêiner pai */
 }
 
 form button {
-    max-width: 120px;
+    max-width: 100%;
+    /* Garante que o botão ocupe toda a largura do contêiner pai */
 }
 
 footer li {
@@ -186,4 +153,10 @@ footer li {
 
 footer li img {
     height: 32px;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
